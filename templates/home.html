@@ -1,0 +1,67 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .content h2 {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our App</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'movies:movie_list' %}">Movies</a></li>
+            <li><a href="{% url 'music:music_list' %}">Music</a></li>
+            <li><a href="{% url 'sports:list' %}">Sports</a></li>
+            <li><a href="{% url 'travel:list' %}">Travel</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Explore Our Lists</h2>
+        <p>Click on the links above to explore the lists of Movies, Music, Sports, and Travel!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music List</title>
+</head>
+<body>
+    <h1>Music List</h1>
+
+    <ul>
+        {% for music in music %}
+            <li>
+                <strong>{{ music.album_title }}</strong> by {{ music.artist }} ({{ music.release_date }})
+                <a href="{% url 'music:music_detail' pk=music.pk %}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'music:music_create' %}">Create New Music</a>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

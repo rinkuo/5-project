@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <a href="{{ movie.get_update_url }}">Edit</a>
+    <a href="{{ movie.get_delete_url }}">Delete</a>
+    <a href="{% url 'movies:movie_list' %}">Back to Movies List</a>
+</body>
+</html>

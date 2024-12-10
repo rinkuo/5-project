@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ music.album_title }} - Details</title>
+</head>
+<body>
+
+<h1>{{ music.album_title }}</h1>
+<p><strong>Artist:</strong> {{ music.artist }}</p>
+<p><strong>Release Date:</strong> {{ music.release_date }}</p>
+<p><strong>Genre:</strong> {{ music.genre }}</p>
+
+<!-- Links to update or delete the music entry -->
+<button><a href="{% url 'music:music_update' pk=music.pk %}">Update</a></button>
+<button><a href="{% url 'music:music_delete' pk=music.pk %}">Delete</a></button>
+
+<!-- Link to go back to the list of music items -->
+<button><a href="{% url 'music:music_list' %}">Back to List</a></button>
+
+</body>
+</html>
